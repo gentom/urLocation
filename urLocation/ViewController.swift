@@ -9,28 +9,31 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreMotion
 
 class ViewController: UIViewController {
     
     //Map
     @IBOutlet weak var map: MKMapView!
     
-    let manager = CLLocationManager()
+    var locationManager: CLLocationManager!
+    var motionManager: CMMotionManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.distanceFilter = 100.0
+        motionManager = CMMotionManager()
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 20.0
         let status = CLLocationManager.authorizationStatus()
         if(status == CLAuthorizationStatus.notDetermined) {
             print("didChangeAuthorizationStatus:\(status)");
-            manager.requestAlwaysAuthorization()
+            locationManager.requestAlwaysAuthorization()
         }
         
-        manager.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
 }
 
 
+//Delegate
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
