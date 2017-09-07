@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         let status = CLLocationManager.authorizationStatus()
         if(status == CLAuthorizationStatus.notDetermined) {
             print("didChangeAuthorizationStatus:\(status)");
-            manager.requestWhenInUseAuthorization()
+            manager.requestAlwaysAuthorization()
         }
         
         manager.startUpdatingLocation()
