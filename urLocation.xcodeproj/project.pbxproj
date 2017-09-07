@@ -15,6 +15,7 @@
 		DBE1D8261F610A7600C5D701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBE1D8241F610A7600C5D701 /* LaunchScreen.storyboard */; };
 		DBE1D8311F610A7600C5D701 /* urLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1D8301F610A7600C5D701 /* urLocationTests.swift */; };
 		DBE1D83C1F610A7600C5D701 /* urLocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1D83B1F610A7600C5D701 /* urLocationUITests.swift */; };
+		DBE1D84B1F610DB900C5D701 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE1D84A1F610DB900C5D701 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DBE1D8371F610A7600C5D701 /* urLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = urLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE1D83B1F610A7600C5D701 /* urLocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urLocationUITests.swift; sourceTree = "<group>"; };
 		DBE1D83D1F610A7600C5D701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBE1D84A1F610DB900C5D701 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE1D84B1F610DB900C5D701 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				DBE1D82F1F610A7600C5D701 /* urLocationTests */,
 				DBE1D83A1F610A7600C5D701 /* urLocationUITests */,
 				DBE1D8161F610A7600C5D701 /* Products */,
+				DBE1D8491F610DB800C5D701 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				DBE1D83D1F610A7600C5D701 /* Info.plist */,
 			);
 			path = urLocationUITests;
+			sourceTree = "<group>";
+		};
+		DBE1D8491F610DB800C5D701 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBE1D84A1F610DB900C5D701 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
