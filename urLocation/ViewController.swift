@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
-import CoreMotion
+//import CoreMotion
 
 class ViewController: UIViewController {
     
@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     
     var locationManager: CLLocationManager!
-    var motionManager: CMMotionManager!
+    //var motionManager: CMMotionManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        motionManager = CMMotionManager()
+        //motionManager = CMMotionManager()
+        
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
